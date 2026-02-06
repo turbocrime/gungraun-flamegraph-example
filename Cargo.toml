@@ -1,0 +1,16 @@
+[package]
+name = "gungraun-flamegraph-example"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+name = "flamegraph_example"
+path = "src/lib.rs"
+
+[dev-dependencies]
+gungraun = "0.17.0"
+
+[[bench]]
+harness = false
+name = "staircase_repro"
+
