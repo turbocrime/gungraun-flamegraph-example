@@ -43,9 +43,10 @@ Expected output: Branching folded stacks reflecting the two-peak call graph.
 
 # Before 
 
-<img width="1200" height="1426" alt="callgrind bench_request case total Ir flamegraph svg" src="https://github.com/user-attachments/assets/980dfac8-45dd-4539-b285-cf98b2c055f6" />
+<img width="1200" height="1586" alt="callgrind bench_request case total Ir flamegraph svg" src="https://github.com/user-attachments/assets/232c0b6c-18de-48c3-a53f-28ebf3ef5767" />
 
 
 # After
 
-<img width="1200" height="338" alt="fixed callgrind bench_request case total Ir flamegraph svg" src="https://github.com/user-attachments/assets/3a953667-8b1c-493c-89ae-0c7c177eee02" />
+<img width="1200" height="434" alt="fixed callgrind bench_request case total Ir flamegraph svg" src="https://github.com/user-attachments/assets/1317622b-0810-43ee-aca4-0d80569a5e91" />
+
