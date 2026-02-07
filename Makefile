@@ -26,5 +26,5 @@ fixed:
 
 .PHONY: clean
 clean:
-	rm -rfv ./repro ./fixed ./target
+	rm -rfv ./repro ./fixed
 	docker volume rm gungraun-repro-cargo gungraun-fixed-cargo
