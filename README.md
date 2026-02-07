@@ -3,6 +3,8 @@
 Gungraun flamegraphs produce a linear 'staircase' instead of a branching call
 tree, even when the call graph has sibling calls.
 
+Relevant to https://github.com/gungraun/gungraun/issues/523 and https://github.com/gungraun/gungraun/pull/524
+
 ## Run Examples
 
 ```sh
