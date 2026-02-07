@@ -39,3 +39,13 @@ Actual output: Linear staircase instead of a flamegraph, where every function is
 nested under the previous one by descending cost.
 
 Expected output: Branching folded stacks reflecting the two-peak call graph.
+
+
+# Before 
+
+<img width="1200" height="1426" alt="callgrind bench_request case total Ir flamegraph svg" src="https://github.com/user-attachments/assets/980dfac8-45dd-4539-b285-cf98b2c055f6" />
+
+
+# After
+
+<img width="1200" height="338" alt="fixed callgrind bench_request case total Ir flamegraph svg" src="https://github.com/user-attachments/assets/3a953667-8b1c-493c-89ae-0c7c177eee02" />
