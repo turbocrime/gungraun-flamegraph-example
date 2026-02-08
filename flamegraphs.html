@@ -5,6 +5,7 @@
 <title>gungraun flamegraphs</title>
 <style>
   .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .triple { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; }
   .side { min-width: 0; }
   object { width: 100%; }
 </style>
@@ -30,49 +31,77 @@
   </div>
 </div>
 
-<h2>multithread_repro &mdash; bench_half</h2>
+<h2>multithread_repro &mdash; bench_zero_thread_one</h2>
 <div class="pair">
   <div class="side">
-    <h3>repro (upstream, buggy)</h3>
-    <object class="flamegraph" data="repro/gungraun-flamegraph-example/repro/gungraun-flamegraph-example/multithread_repro/multithread/bench_half.case/callgrind.bench_half.case.total.Ir.flamegraph.svg">
+    <h3>repro (upstream, buggy) &mdash; total</h3>
+    <object class="flamegraph" data="repro/gungraun-flamegraph-example/repro/gungraun-flamegraph-example/multithread_repro/multithread/bench_zero_thread_one.case/callgrind.bench_zero_thread_one.case.total.Ir.flamegraph.svg">
       <p class="missing">not yet generated &mdash; run <code>make repro</code></p>
     </object>
   </div>
   <div class="side">
-    <h3>fixed (fix/flamegraph branch)</h3>
-    <object class="flamegraph" data="fixed/gungraun-flamegraph-example/fixed/gungraun-flamegraph-example/multithread_repro/multithread/bench_half.case/callgrind.bench_half.case.total.Ir.flamegraph.svg">
+    <h3>fixed &mdash; t2 (worker)</h3>
+    <object class="flamegraph" data="fixed/gungraun-flamegraph-example/fixed/gungraun-flamegraph-example/multithread_repro/multithread/bench_zero_thread_one.case/callgrind.bench_zero_thread_one.case.t2.p1.Ir.flamegraph.svg">
       <p class="missing">not yet generated &mdash; run <code>make fixed</code></p>
     </object>
   </div>
 </div>
 
-<h2>multithread_repro &mdash; bench_full</h2>
+<h2>multithread_repro &mdash; bench_one_thread_zero</h2>
 <div class="pair">
   <div class="side">
-    <h3>repro (upstream, buggy)</h3>
-    <object class="flamegraph" data="repro/gungraun-flamegraph-example/repro/gungraun-flamegraph-example/multithread_repro/multithread/bench_full.case/callgrind.bench_full.case.total.Ir.flamegraph.svg">
+    <h3>repro (upstream, buggy) &mdash; total</h3>
+    <object class="flamegraph" data="repro/gungraun-flamegraph-example/repro/gungraun-flamegraph-example/multithread_repro/multithread/bench_one_thread_zero.case/callgrind.bench_one_thread_zero.case.total.Ir.flamegraph.svg">
       <p class="missing">not yet generated &mdash; run <code>make repro</code></p>
     </object>
   </div>
   <div class="side">
-    <h3>fixed (fix/flamegraph branch)</h3>
-    <object class="flamegraph" data="fixed/gungraun-flamegraph-example/fixed/gungraun-flamegraph-example/multithread_repro/multithread/bench_full.case/callgrind.bench_full.case.total.Ir.flamegraph.svg">
+    <h3>fixed &mdash; t1 (bench)</h3>
+    <object class="flamegraph" data="fixed/gungraun-flamegraph-example/fixed/gungraun-flamegraph-example/multithread_repro/multithread/bench_one_thread_zero.case/callgrind.bench_one_thread_zero.case.t1.p1.Ir.flamegraph.svg">
       <p class="missing">not yet generated &mdash; run <code>make fixed</code></p>
     </object>
   </div>
 </div>
 
-<h2>multithread_repro &mdash; bench_hybrid</h2>
-<div class="pair">
+<h2>multithread_repro &mdash; bench_zero_thread_two</h2>
+<div class="triple">
   <div class="side">
-    <h3>repro (upstream, buggy)</h3>
-    <object class="flamegraph" data="repro/gungraun-flamegraph-example/repro/gungraun-flamegraph-example/multithread_repro/multithread/bench_hybrid.case/callgrind.bench_hybrid.case.total.Ir.flamegraph.svg">
+    <h3>repro (upstream, buggy) &mdash; total</h3>
+    <object class="flamegraph" data="repro/gungraun-flamegraph-example/repro/gungraun-flamegraph-example/multithread_repro/multithread/bench_zero_thread_two.case/callgrind.bench_zero_thread_two.case.total.Ir.flamegraph.svg">
       <p class="missing">not yet generated &mdash; run <code>make repro</code></p>
     </object>
   </div>
   <div class="side">
-    <h3>fixed (fix/flamegraph branch)</h3>
-    <object class="flamegraph" data="fixed/gungraun-flamegraph-example/fixed/gungraun-flamegraph-example/multithread_repro/multithread/bench_hybrid.case/callgrind.bench_hybrid.case.total.Ir.flamegraph.svg">
+    <h3>fixed &mdash; t2 (worker 1)</h3>
+    <object class="flamegraph" data="fixed/gungraun-flamegraph-example/fixed/gungraun-flamegraph-example/multithread_repro/multithread/bench_zero_thread_two.case/callgrind.bench_zero_thread_two.case.t2.p1.Ir.flamegraph.svg">
+      <p class="missing">not yet generated &mdash; run <code>make fixed</code></p>
+    </object>
+  </div>
+  <div class="side">
+    <h3>fixed &mdash; t3 (worker 2)</h3>
+    <object class="flamegraph" data="fixed/gungraun-flamegraph-example/fixed/gungraun-flamegraph-example/multithread_repro/multithread/bench_zero_thread_two.case/callgrind.bench_zero_thread_two.case.t3.p1.Ir.flamegraph.svg">
+      <p class="missing">not yet generated &mdash; run <code>make fixed</code></p>
+    </object>
+  </div>
+</div>
+
+<h2>multithread_repro &mdash; bench_one_thread_one</h2>
+<div class="triple">
+  <div class="side">
+    <h3>repro (upstream, buggy) &mdash; total</h3>
+    <object class="flamegraph" data="repro/gungraun-flamegraph-example/repro/gungraun-flamegraph-example/multithread_repro/multithread/bench_one_thread_one.case/callgrind.bench_one_thread_one.case.total.Ir.flamegraph.svg">
+      <p class="missing">not yet generated &mdash; run <code>make repro</code></p>
+    </object>
+  </div>
+  <div class="side">
+    <h3>fixed &mdash; t1 (bench)</h3>
+    <object class="flamegraph" data="fixed/gungraun-flamegraph-example/fixed/gungraun-flamegraph-example/multithread_repro/multithread/bench_one_thread_one.case/callgrind.bench_one_thread_one.case.t1.p1.Ir.flamegraph.svg">
+      <p class="missing">not yet generated &mdash; run <code>make fixed</code></p>
+    </object>
+  </div>
+  <div class="side">
+    <h3>fixed &mdash; t2 (worker)</h3>
+    <object class="flamegraph" data="fixed/gungraun-flamegraph-example/fixed/gungraun-flamegraph-example/multithread_repro/multithread/bench_one_thread_one.case/callgrind.bench_one_thread_one.case.t2.p1.Ir.flamegraph.svg">
       <p class="missing">not yet generated &mdash; run <code>make fixed</code></p>
     </object>
   </div>
