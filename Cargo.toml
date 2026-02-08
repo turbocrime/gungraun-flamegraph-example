@@ -14,3 +14,7 @@ gungraun = "0.17.0"
 harness = false
 name = "staircase_repro"
 
+[[bench]]
+harness = false
+name = "multithread_repro"
+

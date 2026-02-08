@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>gungraun flamegraphs</title>
+<style>
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .side { min-width: 0; }
+  object { width: 100%; }
+</style>
+</head>
+<body>
+
+<h1>gungraun flamegraphs</h1>
+<p class="note">Each flamegraph is interactive: click to zoom, Ctrl+F to search.</p>
+
+<h2>staircase_repro &mdash; bench_request</h2>
+<div class="pair">
+  <div class="side">
+    <h3>repro (upstream, buggy)</h3>
+    <object class="flamegraph" data="repro/gungraun-flamegraph-example/repro/gungraun-flamegraph-example/staircase_repro/staircase_bug/bench_request.case/callgrind.bench_request.case.total.Ir.flamegraph.svg">
+      <p class="missing">not yet generated &mdash; run <code>make repro</code></p>
+    </object>
+  </div>
+  <div class="side">
+    <h3>fixed (fix/flamegraph branch)</h3>
+    <object class="flamegraph" data="fixed/gungraun-flamegraph-example/fixed/gungraun-flamegraph-example/staircase_repro/staircase_bug/bench_request.case/callgrind.bench_request.case.total.Ir.flamegraph.svg">
+      <p class="missing">not yet generated &mdash; run <code>make fixed</code></p>
+    </object>
+  </div>
+</div>
+
+<h2>multithread_repro &mdash; bench_half</h2>
+<div class="pair">
+  <div class="side">
+    <h3>repro (upstream, buggy)</h3>
+    <object class="flamegraph" data="repro/gungraun-flamegraph-example/repro/gungraun-flamegraph-example/multithread_repro/multithread/bench_half.case/callgrind.bench_half.case.total.Ir.flamegraph.svg">
+      <p class="missing">not yet generated &mdash; run <code>make repro</code></p>
+    </object>
+  </div>
+  <div class="side">
+    <h3>fixed (fix/flamegraph branch)</h3>
+    <object class="flamegraph" data="fixed/gungraun-flamegraph-example/fixed/gungraun-flamegraph-example/multithread_repro/multithread/bench_half.case/callgrind.bench_half.case.total.Ir.flamegraph.svg">
+      <p class="missing">not yet generated &mdash; run <code>make fixed</code></p>
+    </object>
+  </div>
+</div>
+
+<h2>multithread_repro &mdash; bench_full</h2>
+<div class="pair">
+  <div class="side">
+    <h3>repro (upstream, buggy)</h3>
+    <object class="flamegraph" data="repro/gungraun-flamegraph-example/repro/gungraun-flamegraph-example/multithread_repro/multithread/bench_full.case/callgrind.bench_full.case.total.Ir.flamegraph.svg">
+      <p class="missing">not yet generated &mdash; run <code>make repro</code></p>
+    </object>
+  </div>
+  <div class="side">
+    <h3>fixed (fix/flamegraph branch)</h3>
+    <object class="flamegraph" data="fixed/gungraun-flamegraph-example/fixed/gungraun-flamegraph-example/multithread_repro/multithread/bench_full.case/callgrind.bench_full.case.total.Ir.flamegraph.svg">
+      <p class="missing">not yet generated &mdash; run <code>make fixed</code></p>
+    </object>
+  </div>
+</div>
+
+<h2>multithread_repro &mdash; bench_hybrid</h2>
+<div class="pair">
+  <div class="side">
+    <h3>repro (upstream, buggy)</h3>
+    <object class="flamegraph" data="repro/gungraun-flamegraph-example/repro/gungraun-flamegraph-example/multithread_repro/multithread/bench_hybrid.case/callgrind.bench_hybrid.case.total.Ir.flamegraph.svg">
+      <p class="missing">not yet generated &mdash; run <code>make repro</code></p>
+    </object>
+  </div>
+  <div class="side">
+    <h3>fixed (fix/flamegraph branch)</h3>
+    <object class="flamegraph" data="fixed/gungraun-flamegraph-example/fixed/gungraun-flamegraph-example/multithread_repro/multithread/bench_hybrid.case/callgrind.bench_hybrid.case.total.Ir.flamegraph.svg">
+      <p class="missing">not yet generated &mdash; run <code>make fixed</code></p>
+    </object>
+  </div>
+</div>
+
+<script>
+// Size each <object> to its SVG's intrinsic height once loaded.
+document.querySelectorAll('object.flamegraph').forEach(obj => {
+  obj.addEventListener('load', () => {
+    try {
+      const svg = obj.contentDocument?.documentElement;
+      if (svg) {
+        const h = svg.getAttribute('height') || svg.viewBox?.baseVal?.height;
+        if (h) obj.style.height = parseFloat(h) + 'px';
+      }
+    } catch (e) { /* cross-origin or missing */ }
+  });
+});
+</script>
+
+</body>
+</html>
